@@ -6,6 +6,8 @@ public class Cliente {
     private CuentaCredito cuentaC;
     private static int i = 0;
 
+    private Inversion inversion;
+
     public Cliente(CuentaNormal cN, CuentaCredito cC) {
         this.cuentaN = cN;
         this.cuentaC = cC;
@@ -30,5 +32,8 @@ public class Cliente {
         return saldo;
     }
 
+    public void hacerInversion(int montoAInvertir) {
+        this.inversion = new Inversion(montoAInvertir,2, 20);
+    }
 
 }
